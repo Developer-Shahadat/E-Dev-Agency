@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HeadingSection from '../../components/HeadingSection'
 import { FaApple, FaGoogle, FaAmazon, FaMicrosoft, FaFacebook } from "react-icons/fa";
 

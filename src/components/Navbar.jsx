@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Link } from 'react-router'
 import { useAuth } from '../context/AuthContext'
 
@@ -12,7 +12,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar max-w-screen-2xl container mx-auto bg-white px-5 ">
+        <div className="navbar max-w-screen-2xl container mx-auto bg-white px-5 sticky top-0 z-50 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,10 +39,10 @@ const Navbar = () => {
                             <details>
                                 <summary>Categories</summary>
                                 <ul className="p-2">
-                                    <li><Link to="/" >Web Design</Link></li>
+                                    <li><Link to="/" >Web Development</Link></li>
                                     <li><Link to="/" >App Development</Link></li>
                                     <li><Link to="/" >UI/UX Design</Link></li>
-                                    <li><Link to="/" >Digital Marketing</Link></li>
+                                    <li><Link to="/" >Networking</Link></li>
                                 </ul>
                             </details>
                         </li>
@@ -50,7 +50,7 @@ const Navbar = () => {
                 </div>
                 <Link to="/" className="text-xl font-bold flex items-center">
                     <img src="/logo.png" alt="" />
-                    <span className='ml-2 text-[#697077] hidden sm:block'>WebCode</span>
+                    <span className='ml-2 text-[#697077] hidden sm:block'>E-Dev</span>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -62,10 +62,10 @@ const Navbar = () => {
                         <details>
                             <summary>Categories</summary>
                             <ul className="p-2 z-50">
-                                <li><Link to="/" >Web Design</Link></li>
-                                <li><Link to="/" >App Development</Link></li>
-                                <li><Link to="/" >UI/UX Design</Link></li>
-                                <li><Link to="/" >Digital Marketing</Link></li>
+                            <li><Link to="/" >Web Development</Link></li>
+                                    <li><Link to="/" >App Development</Link></li>
+                                    <li><Link to="/" >UI/UX Design</Link></li>
+                                    <li><Link to="/" >Networking</Link></li>
                             </ul>
                         </details>
                     </li>
@@ -74,7 +74,7 @@ const Navbar = () => {
             <div className="navbar-end space-x-4">
                 {
                     user ? (<><Link to="/dashboard" className="btn btn-outline btn-primary px-8 hidden sm:flex">Dashboard</Link>
-                        <button onClick={handleLogOut}  className="btn  btn-primary bg-primary text-white">Logout</button></>) : (<><Link to="/login" className="btn btn-outline btn-primary px-8 hidden sm:flex">Log In</Link>
+                        <button onClick={handleLogOut}  className="btn  btn-primary bg-primary text-white">Logout</button></>) : (<><Link to="/login" className="btn btn-outline btn-primary px-8  sm:flex">Log In</Link>
                             <Link to="/pricing" className="btn  btn-primary bg-primary text-white">Start Free Trial</Link></>)
                 }
 

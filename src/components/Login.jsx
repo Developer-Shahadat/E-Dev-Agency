@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router';
 import { useForm } from "react-hook-form"
@@ -56,7 +56,7 @@ const Login = () => {
                                 }
                             })}
                             type="email"
-                            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2`} />
+                            className={`w-full px-4 py-2 border text-black bg-slate-200 rounded-md focus:outline-none focus:ring-2`} />
                         {errors.email && <p className='text-sm italic text-red-500 mt-2'>{errors.email.message}</p>}
                     </div>
                     <div>
@@ -68,7 +68,7 @@ const Login = () => {
                                 }
                             })}
                             type="password"
-                            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2`} />
+                            className={`w-full px-4 py-2 border text-black bg-slate-200 rounded-md focus:outline-none focus:ring-2`} />
                         {errors.password && <p className='text-sm italic text-red-500 mt-2'>{errors.password.message}</p>}
                     </div>
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import 'react'
 import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router';
 import { useForm } from "react-hook-form"
@@ -59,7 +59,7 @@ const Register = () => {
                 {/* registration form */}
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>
                     <div>
-                        <label className='block mb-2 text-sm font-medium text-gray-700'>Email: </label>
+                        <label className='block mb-2 text-sm font-medium  text-gray-700'>Email: </label>
                         <input
                             {...register("email", {
                                 required: "Email is required", pattern: {
@@ -67,7 +67,7 @@ const Register = () => {
                                 }
                             })}
                             type="email"
-                            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2`} />
+                            className={`w-full px-4 py-2 border text-black bg-slate-200 rounded-md focus:outline-none focus:ring-2`} />
                         {errors.email && <p className='text-sm italic text-red-500 mt-2'>{errors.email.message}</p>}
                     </div>
                     <div>
@@ -79,7 +79,7 @@ const Register = () => {
                                 }
                             })}
                             type="password"
-                            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2`} />
+                            className={`w-full px-4 py-2 border text-black bg-slate-200 rounded-md focus:outline-none focus:ring-2`} />
                         {errors.password && <p className='text-sm italic text-red-500 mt-2'>{errors.password.message}</p>}
                     </div>
 
